@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { buscar } from "../../services/Service";
+import { buscar } from '../../services/Service';
 import Produto from '../../../models/Produtos';
 import CardProdutos from '../cardprodutos/CardProdutos';
 

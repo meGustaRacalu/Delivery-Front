@@ -1,8 +1,8 @@
 export default interface Produto {
-    id: number;
-    nome: string;
-    preco: number;
-    categoria: string;
-    entrega: number; 
-  }
-  
+  id: number;
+  nome: string;
+  preco: number;
+  entrega: number;
+  categoria: string;
+  imagemUrl: string; 
+}
