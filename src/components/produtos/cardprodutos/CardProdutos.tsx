@@ -1,4 +1,9 @@
-function CardProdutos({ produto }: CardProdutosProps) {
+import { Link } from "react-router-dom";
+
+interface CardProdutosProps { id: number, nome: string, imagemUrl: string, preco: number, categoria: string, entrega: number
+
+}
+function CardProdutos({ id, nome, imagemUrl, categoria, preco, entrega }: CardProdutosProps) {
     const formatCurrency = (value: number) => {
         return new Intl.NumberFormat('pt-BR', {
             style: 'currency',
@@ -11,31 +16,31 @@ function CardProdutos({ produto }: CardProdutosProps) {
             flex flex-col rounded overflow-hidden justify-between'>
             <div>
                 <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
-                    {produto.imagemUrl && (
+                    {imagemUrl && (
                         <img
-                            src={produto.imagemUrl}
+                            src={imagemUrl}
                             className='h-12 rounded-full'
-                            alt={produto.nome}
+                            alt={nome}
                         />
                     )}
                     <h3 className='text-lg font-bold text-center uppercase'>
-                        {produto.nome}
+                        {nome}
                     </h3>
                 </div>
                 <div className='p-4'>
                     <h4 className='text-lg font-semibold uppercase'>Informações do Produto</h4>
-                    <p>Preço: {formatCurrency(produto.preco)}</p>
-                    <p>Categoria: {produto.categoria}</p>
-                    <p>Taxa de Entrega: {formatCurrency(produto.entrega)}</p>
+                    <p>Preço: {formatCurrency(preco)}</p>
+                    <p>Categoria: {categoria}</p>
+                    <p>Taxa de Entrega: {formatCurrency(entrega)}</p>
                 </div>
             </div>
             <div className="flex">
-                <Link to={`/editarproduto/${produto.id}`} 
+                <Link to={`/editarproduto/${id}`} 
                     className='w-full text-white bg-indigo-400 
                     hover:bg-indigo-800 flex items-center justify-center py-2'>
                     <button>Editar</button>
                 </Link>
-                <Link to={`/deletarproduto/${produto.id}`} 
+                <Link to={`/deletarproduto/${id}`} 
                     className='text-white bg-red-400 
                     hover:bg-red-700 w-full flex items-center justify-center'>
                     <button>Deletar</button>
@@ -44,3 +49,5 @@ function CardProdutos({ produto }: CardProdutosProps) {
         </div>
     );
 }
+
+export default CardProdutos
