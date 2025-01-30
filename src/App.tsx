@@ -21,7 +21,9 @@ function App() {
         <Route path="/formprodutos" element={<FormProdutos />} />
         <Route path="/listarprodutos" element={<ListaProdutos />} /> 
         <Route path="/produtossaudaveis" element={<ProdutosSaudaveis />} /> 
+        <Route path="/formprodutos/:id" element={<FormProdutos />} />
         <Route path="/listarprodutos" element={<ListaProdutos />} />
+        <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
       </Routes>
       <Footer />
     </Router>
