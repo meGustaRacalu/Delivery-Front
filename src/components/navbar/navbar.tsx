@@ -9,7 +9,7 @@ function Navbar() {
 
                     <div className='flex gap-4'>
                         <Link to="/produtos" className="text-white">Produtos</Link>
-                        <Link to="/produtos" className="text-white">Categoria</Link>
+                        <Link to="/categoria" className="text-white">Categoria</Link>
                         <Link to="/sobre" className="text-white">Sobre nós</Link>
                     </div>
                 </div>
