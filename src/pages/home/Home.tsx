@@ -18,9 +18,20 @@ function Home() {
                                             border-white border-solid border-2 py-2 px-4'
                                 >
                                 <Link to="/produtos">Nossos produtos</Link> 
+                                
                             </div>
+
+                            <div className='rounded text-white 
+                                            border-white border-solid border-2 py-2 px-4'
+                                >
+                                 <Link to="/produtossaudaveis">Produtos Saudaveis</Link> 
+                            </div>
+                           
                         </div>
                     </div>
+
+
+
 
                     <div className="flex justify-center ">
                         <img
