@@ -20,45 +20,20 @@ export default function Sobre() {
                             className="flex-shrink-0"
                         >
                             <img
-                                src="https://avatars.githubusercontent.com/u/191371012?v=4&size=128"
-                                alt="Foto do criador desse conteúdo"
+                                src="https://i.imgur.com/Bu03IQI.png"
+                                alt="Foto do time"
                                 className="rounded-full shadow-lg w-32 h-32"
                             />
                         </a>
                         <article id="sobre_texto" className="leading-relaxed text-center md:text-left">
-                            <p className="mb-4 font-semibold text-lg">
-                                Empresa de Desenvolvimento de SoftWare
-                            </p>
-                            <h3 className="font-bold text-lg mb-2">Sobre:</h3>
+                            <h3 className="font-bold text-lg text-orange-600 mb-6">Aplicativo de Delivery:</h3>
                             <ul className="list-disc ml-4">
-                                <li>
-                                    Desde 2005 ativos na área da saúde, em 2007 abrimos nossa
-                                    primeira filial em Filipinas, nomeada Jemaitis Correria,
-                                    seguida pela Fitness Doiszaga e a Morabytes Bodybuilding Center.
-                                </li>
+                                <p>Somos uma empresa de delivery dedicada a levar praticidade e qualidade até você. <br />
+                                Com um time ágil e comprometido, garantimos que seu pedido chegue rápido e com a melhor experiência. <br />
+                                Seja para sua refeição, compras do dia a dia ou necessidades urgentes, estamos prontos para atender a qualquer momento. <br />
+                                Confiança, rapidez e excelência são os pilares que nos movem a oferecer o melhor serviço de entrega para você.</p>
                             </ul>
                         </article>
-                    </div>
-                </section>
-
-                <section
-                    id="video"
-                    className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8"
-                >
-                    <h2 className="text-4xl font-bold text-center text-orange-600 mb-6">
-                        Vídeo que Representa Nossa Empresa
-                    </h2>
-                    <div id="youtube" className="flex justify-center">
-                        <iframe
-                            width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/d5GkgVhFeZY?si=hCDpG3zbFLh5hzEc"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin"
-                            allowFullScreen
-                            className="rounded-lg shadow-md"
-                        ></iframe>
                     </div>
                 </section>
             </main>

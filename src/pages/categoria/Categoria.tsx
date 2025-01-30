@@ -8,11 +8,11 @@ function ModalCategoria() {
     return (
         <div className="container mx-auto p-4">
             <div className="flex justify-between items-center mb-4">
-                <h1 className="text-2xl font-bold text-indigo-800">Produtos</h1>
+                <h1 className="text-2xl font-bold text-orange-800">Categorias</h1>
                 <Popup
                     trigger={
                         <button 
-                            className='border rounded px-4 py-2 bg-indigo-600 text-white hover:bg-white hover:text-indigo-800'>
+                            className='border rounded px-4 py-2 bg-orange-600 text-white hover:bg-white hover:text-orange-800'>
                             Nova categoria
                         </button>
                     }

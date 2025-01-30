@@ -52,21 +52,21 @@ function FormCategoria() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
             <div className="border-slate-900 border rounded-lg overflow-hidden shadow-lg bg-white w-full max-w-2xl">
-                <div className="flex items-center justify-between bg-indigo-400 py-4 px-6">
+                <div className="flex items-center justify-between bg-orange-400 py-4 px-6">
                     <h3 className="text-xl font-bold text-white uppercase">
-                        {id ? 'Editar Produto' : 'Cadastrar Produto'}
+                        {id ? 'Editar Categoria' : 'Cadastrar Categoria'}
                     </h3>
                 </div>
                 <form className="p-6 flex flex-col gap-4" onSubmit={salvarCategoria}>
                     <div>
-                        <label className="block text-gray-700 font-semibold mb-2">Nome do Produto</label>
+                        <label className="block text-gray-700 font-semibold mb-2">Descrição da Categoria</label>
                         <input
                             type="text"
                             name="nome"
                             placeholder="Digite a descrição da categoria"
                             value={categoria.descricao}
                             onChange={atualizarEstado}
-                            className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                            className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
                             required
                         />
                     </div>
@@ -80,7 +80,7 @@ function FormCategoria() {
                         </button>
                         <button
                             type="submit"
-                            className="w-1/2 bg-indigo-500 hover:bg-indigo-700 text-white py-2 rounded font-bold transition duration-300"
+                            className="w-1/2 bg-orange-500 hover:bg-orange-700 text-white py-2 rounded font-bold transition duration-300"
                         >
                             {id ? 'Atualizar' : 'Cadastrar'}
                         </button>

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/navbar';
 import Home from './pages/home/Home';
-import ModalProdutos from './pages/produtos/produtos';
+import ModalProdutos from './pages/produtos/ModalProdutos';
 import Categoria from './pages/categoria/Categoria';
 import Sobre from './pages/sobre/Sobre';
 import DeletarProduto from './components/produtos/deletarprodutos/DeletarProdutos';

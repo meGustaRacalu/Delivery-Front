@@ -72,7 +72,7 @@ function FormProdutos() {
         <>
         <div className="flex flex-col items-center justify-center bg-gray-100" >
             <div className="border-slate-900 border rounded-lg overflow-hidden shadow-lg bg-white w-full max-w-2xl">
-                <div className="flex items-center justify-between bg-indigo-400 py-4 px-6">
+                <div className="flex items-center justify-between bg-orange-400 py-4 px-6">
                     <h3 className="text-xl font-bold text-white uppercase">
                         {id ? 'Editar Produto' : 'Cadastrar Produto'}
                     </h3>
@@ -86,7 +86,7 @@ function FormProdutos() {
                             placeholder="Digite o nome do produto"
                             value={produto.nome || ''}
                             onChange={atualizarEstado}
-                            className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                            className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
                             required
                             />
                     </div>
@@ -100,7 +100,7 @@ function FormProdutos() {
                             onChange={(e) =>
                                 setProduto({ ...produto, preco: parseFloat(e.target.value) })
                             }
-                            className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                            className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
                             required
                             />
                     </div>
@@ -110,7 +110,7 @@ function FormProdutos() {
                             name="categoria"
                             value={produto.categoria?.id.toString() || ''}
                             onChange={atualizarEstado}
-                            className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                            className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
                             required
                             >
                             <option value="" disabled>Selecione uma Categoria</option>
@@ -131,7 +131,7 @@ function FormProdutos() {
                             onChange={(e) =>
                                 setProduto({ ...produto, entrega: parseFloat(e.target.value) })
                             }
-                            className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                            className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
                             required
                             />
                     </div>
@@ -145,7 +145,7 @@ function FormProdutos() {
                         </button>
                         <button
                             type="submit"
-                            className="w-1/2 bg-indigo-500 hover:bg-indigo-700 text-white py-2 rounded font-bold transition duration-300"
+                            className="w-1/2 bg-orange-500 hover:bg-orange-700 text-white py-2 rounded font-bold transition duration-300"
                             >
                             {id ? 'Atualizar' : 'Cadastrar'}
                         </button>
