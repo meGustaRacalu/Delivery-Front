@@ -7,7 +7,7 @@ import Categoria from '../../../models/Categoria';
 function FormProdutos() {
     const navigate = useNavigate();
     const [produto, setProduto] = useState<Produto>({} as Produto);
-    const [categorias, setCategorias] = useState<Categoria[]>({} as Categoria[]);
+    const [categorias, setCategorias] = useState<Categoria[]>();
     const { id } = useParams<{ id: string }>();
     const token = "seu-token-aqui";
 
@@ -30,8 +30,8 @@ function FormProdutos() {
     useEffect(() => {
         if (id !== undefined) {
             buscarProdutoPorId(id);
+            }
             buscarCategorias();
-        }
     }, [id]);
 
     function atualizarEstado(e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
@@ -95,7 +95,7 @@ function FormProdutos() {
                         required
                     >
                         <option value="" disabled>Selecione uma Categoria</option>
-                        {categorias.map((cat) => 
+                        {categorias?.map((cat) => 
                             <option key={cat.id} value={cat.id}>
                                 {cat.descricao || ''}
                             </option>
