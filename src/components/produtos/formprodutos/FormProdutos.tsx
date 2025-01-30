@@ -69,7 +69,8 @@ function FormProdutos() {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <>
+        <div className="flex flex-col items-center justify-center bg-gray-100" >
             <div className="border-slate-900 border rounded-lg overflow-hidden shadow-lg bg-white w-full max-w-2xl">
                 <div className="flex items-center justify-between bg-indigo-400 py-4 px-6">
                     <h3 className="text-xl font-bold text-white uppercase">
@@ -87,7 +88,7 @@ function FormProdutos() {
                             onChange={atualizarEstado}
                             className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
                             required
-                        />
+                            />
                     </div>
                     <div>
                         <label className="block text-gray-700 font-semibold mb-2">Preço</label>
@@ -101,7 +102,7 @@ function FormProdutos() {
                             }
                             className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
                             required
-                        />
+                            />
                     </div>
                     <div>
                         <label className="block text-gray-700 font-semibold mb-2">Categoria</label>
@@ -111,7 +112,7 @@ function FormProdutos() {
                             onChange={atualizarEstado}
                             className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
                             required
-                        >
+                            >
                             <option value="" disabled>Selecione uma Categoria</option>
                             {categorias.map((cat) => (
                                 <option key={cat.id} value={cat.id.toString()}>
@@ -132,26 +133,27 @@ function FormProdutos() {
                             }
                             className="border rounded w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
                             required
-                        />
+                            />
                     </div>
                     <div className="flex gap-4 mt-4">
                         <button
                             type="button"
                             onClick={() => navigate('/produtos')}
                             className="w-1/2 bg-red-500 hover:bg-red-700 text-white py-2 rounded font-bold transition duration-300"
-                        >
+                            >
                             Cancelar
                         </button>
                         <button
                             type="submit"
                             className="w-1/2 bg-indigo-500 hover:bg-indigo-700 text-white py-2 rounded font-bold transition duration-300"
-                        >
+                            >
                             {id ? 'Atualizar' : 'Cadastrar'}
                         </button>
                     </div>
                 </form>
             </div>
         </div>
+    </>
     );
 }
 

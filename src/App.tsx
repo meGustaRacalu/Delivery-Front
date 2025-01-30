@@ -16,23 +16,25 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/produtos" element={<ModalProdutos />} />
-        <Route path="/sobre" element={<Sobre />} />
-        <Route path="/deletarprodutos" element={<DeletarProduto />} />
-        <Route path="/formprodutos" element={<FormProdutos />} />
-        <Route path="/listarprodutos" element={<ListaProdutos />} /> 
-        <Route path="/produtossaudaveis" element={<ProdutosSaudaveis />} /> 
-        <Route path="/formprodutos/:id" element={<FormProdutos />} />
-        <Route path="/listarprodutos" element={<ListaProdutos />} />
-        <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
-        <Route path="/categoria" element={<Categoria/>}/>
-        <Route path="/formcategoria/:id" element={<FormCategoria />} />
-        <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
-      </Routes>
-      <Footer />
-    </Router>
+      <div className="flex flex-col h-screen justify-between">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/produtos" element={<ModalProdutos />} />
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/deletarprodutos" element={<DeletarProduto />} />
+          <Route path="/formprodutos" element={<FormProdutos />} />
+          <Route path="/listarprodutos" element={<ListaProdutos />} /> 
+          <Route path="/produtossaudaveis" element={<ProdutosSaudaveis />} /> 
+          <Route path="/formprodutos/:id" element={<FormProdutos />} />
+          <Route path="/listarprodutos" element={<ListaProdutos />} />
+          <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
+          <Route path="/categoria" element={<Categoria/>}/>
+          <Route path="/formcategoria/:id" element={<FormCategoria />} />
+          <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
+        </Routes>
+        <Footer />
+      </div>
+      </Router>
   );
 }
 

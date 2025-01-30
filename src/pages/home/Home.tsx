@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 function Home() {
     return (
         <>
-            <div className="bg-orange-700 flex justify-center">
-                <div className='container grid grid-cols-2 text-white'>
+            <div className="flex-grow bg-orange-700 justify-center">
+                <div className='container flex-grow flex-cols-2 text-white'>
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
                         <h2 className='text-5xl font-bold'>
                         A rota da felicidade
@@ -30,14 +30,11 @@ function Home() {
                         </div>
                     </div>
 
-
-
-
                     <div className="flex justify-center ">
                         <img
                             src="https://i.imgur.com/EjdzhSk.jpeg"
                             alt="Imagem Página Home"
-                            className='w-2/1'
+                            className='w-4/10'
                             />
                     </div>
                 </div>
