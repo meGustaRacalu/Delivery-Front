@@ -2,21 +2,22 @@ import { useState, useEffect, ChangeEvent } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Produto from '../../../models/Produtos';
 import { buscar, atualizar, cadastrar } from '../../services/Service';
+import Categoria from '../../../models/Categoria';
 
 function FormProdutos() {
     const navigate = useNavigate();
     const [produto, setProduto] = useState<Produto>({} as Produto);
+    const [categorias, setCategorias] = useState<Categoria[]>({} as Categoria[]);
     const { id } = useParams<{ id: string }>();
     const token = "seu-token-aqui";
 
-    // Categorias provisórias
-    const categorias = [
-        "Bebidas",
-        "Salgados",
-        "Doces",
-        "Veganos",
-        "Outros",
-    ];
+    async function buscarCategorias() {
+        try {
+            await buscar(`/categoria`, setCategorias, { Authorization: token });
+        } catch (error) {
+            alert('Erro ao buscar a categoria.');
+        }
+    }
 
     async function buscarProdutoPorId(id: string) {
         try {
@@ -29,6 +30,7 @@ function FormProdutos() {
     useEffect(() => {
         if (id !== undefined) {
             buscarProdutoPorId(id);
+            buscarCategorias();
         }
     }, [id]);
 
@@ -87,17 +89,17 @@ function FormProdutos() {
                     />
                     <select
                         name="categoria"
-                        value={produto.categoria || ''}
+                        value={''}
                         onChange={atualizarEstado}
                         className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
                         required
                     >
                         <option value="" disabled>Selecione uma Categoria</option>
-                        {categorias.map((cat, index) => (
-                            <option key={index} value={cat}>
-                                {cat}
+                        {categorias.map((cat) => 
+                            <option key={cat.id} value={cat.id}>
+                                {cat.descricao || ''}
                             </option>
-                        ))}
+                        )}
                     </select>
                     <input
                         type="number"

@@ -1,3 +1,19 @@
+import { Link } from 'react-router-dom';
+import Categoria from '../../../models/Categoria';
+
+interface Produto {
+    id: number;
+    nome: string;
+    preco: number;
+    entrega: number;
+    categoria: Categoria;
+    imagemUrl?: string;
+}
+
+interface CardProdutosProps {
+    produto: Produto
+}
+
 function CardProdutos({ produto }: CardProdutosProps) {
     const formatCurrency = (value: number) => {
         return new Intl.NumberFormat('pt-BR', {
@@ -25,7 +41,7 @@ function CardProdutos({ produto }: CardProdutosProps) {
                 <div className='p-4'>
                     <h4 className='text-lg font-semibold uppercase'>Informações do Produto</h4>
                     <p>Preço: {formatCurrency(produto.preco)}</p>
-                    <p>Categoria: {produto.categoria}</p>
+                    <p>Categoria: {produto.categoria.descricao}</p>
                     <p>Taxa de Entrega: {formatCurrency(produto.entrega)}</p>
                 </div>
             </div>
@@ -44,3 +60,5 @@ function CardProdutos({ produto }: CardProdutosProps) {
         </div>
     );
 }
+
+export default CardProdutos;
