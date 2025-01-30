@@ -10,7 +10,7 @@ function DeletarCategoria() {
 
     async function buscarCategoria(id: string) {
         try {
-            await buscar(`/categoria`, setCategoria, {});
+            await buscar(`/categoria/${id}`, setCategoria, {});
         } catch (error) {
             alert('Erro ao buscar categoria.');
         }
@@ -24,7 +24,7 @@ function DeletarCategoria() {
 
     async function deletarCategoria() {
         try {
-            await deletar(`/categoria`, {});
+            await deletar(`/categoria/${id}`, {});
             alert('Categoria deletada com sucesso.');
             navigate('/categoria');
         } catch (error) {

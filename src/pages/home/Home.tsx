@@ -38,7 +38,7 @@ function Home() {
                             src="https://i.imgur.com/EjdzhSk.jpeg"
                             alt="Imagem Página Home"
                             className='w-2/1'
-                        />
+                            />
                     </div>
                 </div>
             </div>

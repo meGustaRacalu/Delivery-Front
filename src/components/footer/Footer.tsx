@@ -5,7 +5,7 @@ function Footer() {
 
     return (
         <>
-            <div className="flex justify-center bg-orange-700 text-white">
+            <div className="flex justify-center bg-orange-700 text-white bottom-0">
                 <div className="container flex flex-col items-center py-4">
                     <p className='text-xl font-bold'>
                          Delivery Rota 77 | Copyright: {data}

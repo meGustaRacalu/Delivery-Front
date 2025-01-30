@@ -1,13 +1,9 @@
+import { Link } from "react-router-dom";
+
 interface Categoria { id: number, descricao: string
 
 }
 function Categoria({ id, descricao}: Categoria) {
-    const formatCurrency = (value: number) => {
-        return new Intl.NumberFormat('pt-BR', {
-            style: 'currency',
-            currency: 'BRL',
-        }).format(value);
-    };
 
     return (
         <div className='border-slate-900 border 
@@ -22,6 +18,20 @@ function Categoria({ id, descricao}: Categoria) {
                 <div className='p-4'>
                     <h4 className='text-lg font-semibold uppercase'>Categoria do produto</h4>
                     <p>Descricao: {descricao}</p>
+
+                    
+                    <div className="flex">
+                        <Link to={`/formcategoria/${id}`} 
+                            className='w-full text-white bg-indigo-400 
+                            hover:bg-indigo-800 flex items-center justify-center py-2'>
+                            <button>Editar</button>
+                        </Link>
+                        <Link to={`/deletarcategoria/${id}`} 
+                            className='text-white bg-red-400 
+                            hover:bg-red-700 w-full flex items-center justify-center'>
+                            <button>Deletar</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
