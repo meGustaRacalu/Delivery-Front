@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 interface Categoria { id: number, descricao: string
 
 }
