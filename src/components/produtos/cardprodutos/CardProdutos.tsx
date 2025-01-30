@@ -12,11 +12,20 @@ function CardProdutos({ produto }: CardProdutosProps) {
                 
             <div>
                 <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
+                    {/* Corrigido: agora usa imagemUrl */}
+                    {produto.imagemUrl && (
+                        <img
+                            src={produto.imagemUrl}
+                            className='h-12 rounded-full'
+                            alt={produto.nome}
+                        />
+                    )}
                     <h3 className='text-lg font-bold text-center uppercase'>
                         {produto.nome}
                     </h3>
                 </div>
                 <div className='p-4 '>
+                    <h4 className='text-lg font-semibold uppercase'>Informações do Produto</h4>
                     <p>Preço: R$ {produto.preco.toFixed(2)}</p>
                     <p>Categoria: {produto.categoria}</p>
                     <p>Taxa de Entrega: R$ {produto.entrega.toFixed(2)}</p>
