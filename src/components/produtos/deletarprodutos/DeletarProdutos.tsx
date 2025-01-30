@@ -44,7 +44,7 @@ function DeletarProduto() {
                 </header>
                 <div className='p-4'>
                     <p className='text-xl h-full'>{produto.nome}</p>
-                    <p>Preço: R$ {produto.preco.toFixed(2)}</p>
+                    <p>Preço: R$ {produto.preco?.toFixed(2)}</p>
                 </div>
                 <div className="flex">
                     <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={() => navigate('/produtos')}>
