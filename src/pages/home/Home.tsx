@@ -7,10 +7,10 @@ function Home() {
                 <div className='container grid grid-cols-2 text-white'>
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
                         <h2 className='text-5xl font-bold'>
-                        🍕Seja Bem Vindo🍕
+                        A rota da felicidade
                         </h2>
                         <p className='text-xl'>
-                            As melhores comidas do planeta 😊
+                            Seu pedido na velocidade da luz
                         </p>
 
                         <div className="flex justify-around gap-4">
