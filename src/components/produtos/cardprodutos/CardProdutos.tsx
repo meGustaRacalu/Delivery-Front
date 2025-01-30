@@ -47,7 +47,7 @@ function CardProdutos({ produto }: CardProdutosProps) {
             </div>
             <div className="flex">
                 <Link to={`/editarproduto/${produto.id}`} 
-                    className='w-full text-white bg-indigo-400 
+                    className='w-full text-white b 
                     hover:bg-indigo-800 flex items-center justify-center py-2'>
                     <button>Editar</button>
                 </Link>

@@ -3,7 +3,7 @@ import { buscar } from '../../services/Service';
 import Categoria from '../cardcategoria/CardCategoria';
 import CardCategoria from '../cardcategoria/CardCategoria';
 
-function ListaCategoria() {
+function ListarCategoria() {
     const [categoria, setCategoria] = useState<Categoria[]>([]);
 
     async function buscarCategoria() {
@@ -23,4 +23,4 @@ function ListaCategoria() {
     );
 }
 
-export default ListaCategoria;
+export default ListarCategoria;
