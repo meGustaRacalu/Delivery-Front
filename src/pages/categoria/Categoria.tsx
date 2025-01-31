@@ -1,6 +1,6 @@
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import "../../components/produtos/modalprodutos/ModalProdutos.css";
+import "./categoria.css";
 import FormCategoria from '../../components/categoria/formcategoria/FormCategoria';
 import ListaCategoria from '../../components/categoria/listarcategoria/ListarCategoria';
 
